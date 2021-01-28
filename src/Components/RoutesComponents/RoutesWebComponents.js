@@ -6,7 +6,6 @@ import RegisterPages from "../../Pages/RegisterPages"
 import ProductDetailPages from "../../Pages/ProductDetailPages"
 import CheckoutPages from "../../Pages/CheckoutPages"
 
-
 function RoutesWebComponents() {
 
     return (
@@ -15,7 +14,7 @@ function RoutesWebComponents() {
             <Route path="/login" exact component={LoginPages} />
             <Route path="/register" exact component={RegisterPages} />
             <Route path="/products/:id" exact component={ProductDetailPages} />
-            <Route path="/checkout" exact component={CheckoutPages} />
+            <Route path="/checkout/:id" exact component={CheckoutPages} />
 
         </>
     )

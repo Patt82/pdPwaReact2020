@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import ProductComponents from "../Components/ProductComponents"
 import { getProduct } from "../Services/ProductsServices"
 
+
 function ProductDetailPages(props) {
 
     const [product, setProduct] = useState([]);
@@ -26,6 +27,18 @@ function ProductDetailPages(props) {
                 }    
                 setGotProduct(true);    
             },[got_product, props.match.params.id]);
+
+    // useEffect(
+    //     () => {
+    //         async function fetchData() {
+    //             const response = await getProduct(props.match.params.id)
+    //             console.log(response);
+    //             setProduct(response.data);
+    //             setLoading(false);
+    //         }
+    //         fetchData();
+    //         console.log("producto:"+product)
+    //     }, );
             
         
 
@@ -38,7 +51,7 @@ function ProductDetailPages(props) {
             {
                 !loading &&
                 <div>
-                    <ProductComponents key={product.id} product={product} seeDetail={false} />
+                    <ProductComponents key={product.id} product={product} seeDetail={false} seeBuy={true}/>
                 </div>
             }
         </>

@@ -3,7 +3,6 @@ import ProductComponents from "../Components/ProductComponents"
 import { getProducts } from "../Services/ProductsServices"
 import { Container, Spinner } from 'react-bootstrap'
 import FormGroup from "../Components/Forms/FormGroup"
-
 function HomePages() {
 
     const [products, setProducts] = useState([]);
@@ -41,8 +40,9 @@ function HomePages() {
                 {
                     !loading &&
                     <>
-                        {products.map(p => <ProductComponents key={p.id} product={p} seeDetail={true} />)}
+                        {products.map(p => <ProductComponents key={p.id} product={p} seeDetail={true} seeBuy={true} />)}
                     </>
+                    
                 }
             </Container>
         </>

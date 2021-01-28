@@ -20,8 +20,7 @@ class MenuComponents extends Component {
                                         context.login &&
                                         <>
                                             <OptionComponents key="home" option={{label:"Home",path:"/"}} />
-                                            <Nav.Link onClick={context.logoutUser}>Exit</Nav.Link> 
-                                            {/* //no usar el href */}
+                                            <Nav.Link onClick={context.logoutUser}>Exit</Nav.Link>
                                         </>
                                     }
                                     {

@@ -3,12 +3,14 @@ import {Form, Container} from 'react-bootstrap'
 import FormGroup from "../Components/Forms/FormGroup"
 import ButtonWithLoading from "../Components/Forms/ButtonWithLoading"
 import {create} from '../Services/UserServices'
+// import {useHistory} from 'react-router-dom';
 import AlertCustom from '../Components/AlertCustom'
 
 function RegisterPages() {
     const [form,setForm]=useState({name:'',email:'',password:''});
     const [loading,setLoading] = useState(false);
     const [alert,setAlert]= useState ({variant:"", text:""})
+    // const history = useHistory()
     const handleChange = (e)=>{ //e = elemento sobre el que se modifica/escribe
         
         setForm({
